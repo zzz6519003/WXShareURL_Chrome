@@ -1,0 +1,27 @@
+{
+    "name": "我要戒人人",
+    "version": "0.1",
+    "description": "戒除人人，还我健康生活",
+    "permissions": [
+        "tabs", 
+        "storage",
+        "http://*/*"
+    ],
+    "content_scripts": [{
+        "matches": ["http://*.renren.com/*"],
+        "js": ["jquery.js","rrblock.js"],
+        "run_at": "document_start"
+    }],
+    "web_accessible_resources": [
+        "inner.html",
+        "css/*",
+        "img/*"
+    ],
+    "browser_action":{
+        "default_title": "我要戒人人",
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}
+
